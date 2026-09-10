@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Side Hustles — From ₹10K to ₹1 Lakh | MoreFromWork</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14171A;
+    --green:#123F2A;
+    --green-dark:#0C2E1F;
+    --paper:#F6F5F0;
+    --sage:#DCE6DF;
+    --sage-line: rgba(18,63,42,0.16);
+    --muted:#5B6560;
+    --cream-text:#F3F2EC;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:'Inter',sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:'Poppins',sans-serif;font-weight:900;margin:0;line-height:1.04;}
+  a{color:inherit;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
+  @media(max-width:640px){.wrap{padding:0 20px;}}
+
+  nav{position:sticky;top:0;z-index:50;background:rgba(246,245,240,0.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--sage-line);}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .brand{font-family:'Poppins',sans-serif;font-weight:700;font-size:17px;letter-spacing:0.01em;}
+  .brand em{font-style:normal;color:var(--green);}
+  .nav-cta{background:var(--green);color:var(--cream-text);padding:10px 20px;border-radius:2px;font-weight:600;font-size:14px;text-decoration:none;}
+
+  /* HERO */
+  .hero{padding:64px 0 90px;}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr 0.75fr;gap:56px;align-items:center;}
+  @media(max-width:880px){.hero .wrap{grid-template-columns:1fr;}}
+  .kicker{font-size:13px;color:var(--green);font-weight:700;letter-spacing:0.03em;margin-bottom:16px;}
+  .hero h1{font-size:clamp(36px,5.2vw,58px);}
+  .hero h1 .accent{color:var(--green);}
+  .hero p.sub{font-size:17px;color:var(--muted);max-width:48ch;margin:22px 0 28px;}
+  .price-row{display:flex;align-items:baseline;gap:14px;margin-bottom:24px;}
+  .price-now{font-family:'Poppins',sans-serif;font-weight:900;font-size:32px;}
+  .price-was{font-size:17px;color:var(--muted);text-decoration:line-through;}
+  .btn-primary{display:inline-block;background:var(--green);color:var(--cream-text);padding:16px 30px;border-radius:2px;font-weight:700;font-size:16px;text-decoration:none;border:none;cursor:pointer;}
+  .btn-primary:hover{background:var(--green-dark);}
+  .fine-note{font-size:13px;color:var(--muted);margin-top:12px;}
+  .audience-row{display:flex;gap:22px;margin-top:30px;flex-wrap:wrap;}
+  .audience-item{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:7px;}
+  .audience-dot{width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0;}
+
+  .book-frame{position:relative;}
+  .book-frame img{
+    width:100%;max-width:340px;display:block;margin:0 auto;
+    box-shadow: 0 40px 70px -30px rgba(18,63,42,0.45), 0 4px 0 rgba(18,63,42,0.06);
+    transform: perspective(900px) rotateY(-8deg);
+  }
+  .book-mock{
+    width:100%;max-width:320px;margin:0 auto;aspect-ratio:3/4.24;
+    background:var(--paper);border:1px solid var(--sage-line);
+    box-shadow: 0 40px 70px -30px rgba(18,63,42,0.45);
+    transform: perspective(900px) rotateY(-8deg);
+    padding:26px 22px;display:flex;flex-direction:column;
+  }
+  .book-mock .bm-brand{font-family:'Poppins',sans-serif;font-weight:700;font-size:13px;color:var(--ink);}
+  .book-mock .bm-brand em{font-style:normal;color:var(--green);}
+  .book-mock .bm-tag{font-size:9px;letter-spacing:0.08em;color:var(--muted);margin-top:2px;}
+  .book-mock .bm-title{
+    font-family:'Poppins',sans-serif;font-weight:900;line-height:0.95;margin-top:30px;
+  }
+  .book-mock .bm-title .t1{display:block;font-size:38px;color:var(--ink);}
+  .book-mock .bm-title .t2{display:block;font-size:38px;color:var(--green);}
+  .book-mock .bm-sub{font-size:12px;color:var(--muted);margin-top:14px;max-width:22ch;}
+  .book-mock .bm-steps{display:flex;align-items:flex-end;gap:4px;margin-top:auto;}
+  .book-mock .bm-steps span{flex:1;background:var(--sage);border-top:2px solid var(--green);}
+  .book-mock .bm-steps span:nth-child(1){height:14px;}
+  .book-mock .bm-steps span:nth-child(2){height:22px;}
+  .book-mock .bm-steps span:nth-child(3){height:30px;}
+  .book-mock .bm-steps span:nth-child(4){height:38px;}
+  .book-mock .bm-steps span:nth-child(5){height:46px;background:var(--green);}
+  .book-mock .bm-author{font-size:11px;letter-spacing:0.06em;color:var(--ink);margin-top:14px;font-weight:700;}
+
+  /* SECTION SCAFFOLD */
+  section{padding:74px 0;border-top:1px solid var(--sage-line);}
+  .section-label{font-size:13px;color:var(--green);font-weight:700;letter-spacing:0.03em;margin-bottom:14px;}
+  .section-title{font-size:clamp(26px,3.6vw,38px);max-width:20ch;margin-bottom:34px;}
+
+  /* FRAMEWORK STAIRCASE */
+  .stairs{display:flex;align-items:flex-end;gap:0;margin-top:10px;overflow-x:auto;padding-bottom:6px;}
+  .stair-step{
+    flex:1;min-width:110px;background:var(--sage);border-top:3px solid var(--green);
+    padding:18px 14px;text-align:left;position:relative;
+  }
+  .stair-step + .stair-step{margin-left:6px;}
+  .stair-step:nth-child(1){height:100px;}
+  .stair-step:nth-child(2){height:140px;}
+  .stair-step:nth-child(3){height:180px;}
+  .stair-step:nth-child(4){height:220px;}
+  .stair-step:nth-child(5){height:260px;background:var(--green);border-top-color:var(--green-dark);}
+  .stair-step:nth-child(5) *{color:var(--cream-text) !important;}
+  .stair-amount{font-family:'Poppins',sans-serif;font-weight:900;font-size:20px;display:block;}
+  .stair-label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em;margin-top:4px;display:block;}
+  .stair-focus{font-size:13px;color:var(--ink);margin-top:10px;display:block;}
+  .framework-note{margin-top:24px;font-size:16px;color:var(--muted);max-width:60ch;}
+  .framework-note strong{color:var(--ink);}
+
+  /* TABLE - hustle options */
+  .htable{width:100%;border-collapse:collapse;margin-top:8px;}
+  .htable th{
+    text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:0.03em;
+    color:var(--muted);font-weight:600;padding:10px 14px;border-bottom:2px solid var(--ink);
+  }
+  .htable td{padding:14px 14px;font-size:15px;border-bottom:1px solid var(--sage-line);vertical-align:top;}
+  .htable td.name{font-weight:700;}
+  .htable tr:last-child td{border-bottom:none;}
+  .table-scroll{overflow-x:auto;}
+  .table-scroll table{min-width:640px;}
+
+  /* CONTENTS - 5 parts */
+  .parts{list-style:none;margin:0;padding:0;}
+  .parts li{display:grid;grid-template-columns:60px 1fr auto;align-items:start;gap:18px;padding:24px 0;border-bottom:1px solid var(--sage-line);}
+  .parts li:first-child{border-top:1px solid var(--sage-line);}
+  .part-num{font-family:'Poppins',sans-serif;font-weight:900;font-size:20px;color:var(--green);}
+  .part-title{font-size:18px;font-weight:700;}
+  .part-title span{display:block;font-family:'Inter';font-weight:400;font-size:14px;color:var(--muted);margin-top:5px;line-height:1.5;}
+  .part-pages{font-size:13px;color:var(--muted);white-space:nowrap;}
+
+  /* WHO */
+  .who-list{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+  @media(max-width:760px){.who-list{grid-template-columns:1fr;}}
+  .who-card{padding:26px 22px;background:var(--sage);}
+  .who-card h3{font-family:'Poppins';font-weight:700;font-size:16px;text-transform:none;margin-bottom:8px;}
+  .who-card p{font-size:14px;color:var(--muted);margin:0;}
+
+  /* PULL QUOTE */
+  .pullquote{background:var(--green);color:var(--cream-text);}
+  .pullquote blockquote{
+    font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(24px,3.4vw,34px);
+    margin:0;line-height:1.25;max-width:22ch;
+  }
+  .pullquote p.attrib{margin-top:20px;font-size:14px;color:rgba(243,242,236,0.7);}
+
+  /* AUTHOR */
+  .author{display:grid;grid-template-columns:auto 1fr;gap:30px;align-items:start;}
+  @media(max-width:640px){.author{grid-template-columns:1fr;}}
+  .author-avatar{width:88px;height:88px;border-radius:50%;background:linear-gradient(150deg,var(--green),var(--sage));flex-shrink:0;}
+  .author p{font-size:16px;color:var(--muted);max-width:58ch;}
+  .author .name{font-family:'Poppins',sans-serif;font-weight:700;font-size:18px;margin-bottom:5px;}
+  .handle{font-size:13px;color:var(--green);font-weight:700;margin-bottom:12px;display:inline-block;}
+
+  /* CTA BAND */
+  .cta-band{background:var(--ink);color:var(--cream-text);}
+  .cta-band .section-title{color:var(--cream-text);}
+  .cta-band .price-row{color:var(--cream-text);}
+  .cta-band .price-was{color:rgba(243,242,236,0.5);}
+  .cta-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:30px;}
+  .includes{list-style:none;padding:0;margin:20px 0 0;font-size:14px;color:rgba(243,242,236,0.78);}
+  .includes li{padding:5px 0;}
+
+  /* FAQ */
+  .faq-item{border-bottom:1px solid var(--sage-line);}
+  .faq-item:first-child{border-top:1px solid var(--sage-line);}
+  .faq-q{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:20px 0;font-size:16px;font-weight:600;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:20px;font-family:'Inter';}
+  .faq-q .plus{font-size:20px;color:var(--green);transition:transform 0.2s ease;flex-shrink:0;}
+  .faq-item.open .faq-q .plus{transform:rotate(45deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height 0.25s ease;font-size:15px;color:var(--muted);}
+  .faq-item.open .faq-a{max-height:220px;}
+  .faq-a p{margin:0 0 20px;max-width:62ch;}
+
+  footer{padding:44px 0;text-align:center;}
+  footer p{font-size:13px;color:var(--muted);margin:4px 0;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">More<em>From</em>Work</div>
+    <a href="#buy" class="nav-cta">Get the ebook</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="kicker">Learn · Earn · Grow · On Your Terms</div>
+      <h1>Side hustles,<br>from <span class="accent">₹10K</span> to<br><span class="accent">₹1 Lakh</span>.</h1>
+      <p class="sub">A step-by-step system to build, grow and scale your side income — whether you're a student, a working professional, or just starting out. No hype, no guaranteed-riches promises. Just a repeatable process.</p>
+      <div class="price-row">
+        <span class="price-now">₹199</span>
+        <span class="price-was">₹399</span>
+      </div>
+      <a href="#buy" class="btn-primary">Buy now — instant download</a>
+      <p class="fine-note">155 pages · PDF · 9 hustle paths, full playbooks and scorecards included</p>
+      <div class="audience-row">
+        <span class="audience-item"><span class="audience-dot"></span>Students — skill to income</span>
+        <span class="audience-item"><span class="audience-dot"></span>Professionals — extra income</span>
+        <span class="audience-item"><span class="audience-dot"></span>Anyone — more freedom</span>
+      </div>
+    </div>
+    <div class="book-frame">
+      <div class="book-mock">
+        <div class="bm-brand">More<em>From</em>Work</div>
+        <div class="bm-tag">LEARN · EARN · GROW · ON YOUR TERMS</div>
+        <div class="bm-title"><span class="t1">SIDE</span><span class="t2">HUSTLES</span></div>
+        <div class="bm-sub">From ₹10K to ₹1 Lakh — a step-by-step system to build your side income</div>
+        <div class="bm-steps"><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="bm-author">ANAND</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="section-label">The framework</div>
+    <h2 class="section-title">Five stages. One question answered at each step.</h2>
+    <div class="stairs">
+      <div class="stair-step">
+        <span class="stair-amount">₹0</span>
+        <span class="stair-label">Start</span>
+      </div>
+      <div class="stair-step">
+        <span class="stair-amount">₹10K</span>
+        <span class="stair-label">Prove</span>
+        <span class="stair-focus">Demand — your first customer</span>
+      </div>
+      <div class="stair-step">
+        <span class="stair-amount">₹25K</span>
+        <span class="stair-label">Build</span>
+        <span class="stair-focus">Repeatability — better conversion</span>
+      </div>
+      <div class="stair-step">
+        <span class="stair-amount">₹50K</span>
+        <span class="stair-label">Systemize</span>
+        <span class="stair-focus">Efficiency — packages, retention</span>
+      </div>
+      <div class="stair-step">
+        <span class="stair-amount">₹1L</span>
+        <span class="stair-label">Scale</span>
+        <span class="stair-focus">Volume, team or distribution</span>
+      </div>
+    </div>
+    <p class="framework-note">This is the backbone of the whole book: <strong>don't chase income, build the mechanism that produces it.</strong> Every hustle path is mapped against these same four milestones, so you always know what you're actually trying to prove next.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-label">9 paths, honestly compared</div>
+    <h2 class="section-title">What can you actually sell?</h2>
+    <div class="table-scroll">
+      <table class="htable">
+        <tr><th>Hustle</th><th>Best for</th><th>Main bottleneck</th></tr>
+        <tr><td class="name">Video editing</td><td>Anyone who can learn a repeatable production skill</td><td>Time / capacity</td></tr>
+        <tr><td class="name">Social media management</td><td>People who like ongoing client relationships</td><td>Retention + production</td></tr>
+        <tr><td class="name">Local business services</td><td>People with local access</td><td>Acquisition</td></tr>
+        <tr><td class="name">AI-assisted services</td><td>People who can combine AI with judgment</td><td>QA + positioning</td></tr>
+        <tr><td class="name">Tutoring</td><td>Strong subject knowledge</td><td>Your hours</td></tr>
+        <tr><td class="name">Digital products</td><td>A real problem + a way to reach buyers</td><td>Distribution</td></tr>
+        <tr><td class="name">Affiliate content</td><td>Buyer-focused content creators</td><td>Traffic</td></tr>
+        <tr><td class="name">Content creation</td><td>People willing to build patiently</td><td>Audience growth</td></tr>
+        <tr><td class="name">E-commerce / reselling</td><td>Comfort with product operations</td><td>Unit economics</td></tr>
+      </table>
+    </div>
+    <p class="framework-note">The book doesn't tell you to launch all nine. Each one gets its own options table, a realistic workflow, a 30-day checklist and an illustrative route to your first ₹10K — so you can pick the one row that fits your time, skill and access.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-label">Inside the book</div>
+    <h2 class="section-title">155 pages, in five parts</h2>
+    <ul class="parts">
+      <li><span class="part-num">01</span><span class="part-title">Side Hustles — the foundations<span>Why your first ₹10K matters, time as your first capital, choosing a path, red flags and scams to avoid.</span></span><span class="part-pages">91 pages</span></li>
+      <li><span class="part-num">02</span><span class="part-title">Practical Playbook<span>All 9 hustle options broken down — who buys, what you deliver, realistic workflow and a 30-day checklist for each.</span></span><span class="part-pages">11 pages</span></li>
+      <li><span class="part-num">03</span><span class="part-title">Paid Acquisition Playbook<span>Where paid ads actually fit for each model, and when to validate before you spend on volume.</span></span><span class="part-pages">20 pages</span></li>
+      <li><span class="part-num">04</span><span class="part-title">Execution System<span>Exact illustrative routes to your first ₹10K for every path, and the real funnel behind the number.</span></span><span class="part-pages">24 pages</span></li>
+      <li><span class="part-num">05</span><span class="part-title">Final Quality Upgrade<span>Reality-check table, pricing ladders, a "don't do this" list, money management and a 90-day scorecard.</span></span><span class="part-pages">9 pages</span></li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-label">Who it's for</div>
+    <h2 class="section-title">Built for three kinds of readers</h2>
+    <div class="who-list">
+      <div class="who-card">
+        <h3>Students</h3>
+        <p>Turn an existing skill into your first paid work, without needing capital or a full-time schedule.</p>
+      </div>
+      <div class="who-card">
+        <h3>Working professionals</h3>
+        <p>Build extra income around a day job, using the hours you can realistically protect each week.</p>
+      </div>
+      <div class="who-card">
+        <h3>Anyone starting out</h3>
+        <p>No prior business experience needed — just a willingness to test one offer for 30 days and track what happens.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pullquote">
+  <div class="wrap">
+    <blockquote>"You do not need nine side hustles. You need one working transaction that you understand well enough to repeat."</blockquote>
+    <p class="attrib">— The Last Rule, closing chapter</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap author">
+    <div class="author-avatar"></div>
+    <div>
+      <div class="name">Written by Anand</div>
+      <span class="handle">MoreFromWork</span>
+      <p>MoreFromWork is built around one idea: real skills and a clear process beat hustle-culture hype. This book collects a structured, numbers-first system for testing and scaling a side income — the same ₹0 → ₹1L framework used across every path in the book.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band" id="buy">
+  <div class="wrap">
+    <div class="section-label" style="color:#8FBBA2;">Get started today</div>
+    <div class="cta-inner">
+      <div>
+        <h2 class="section-title">Pick one path. Test it for 30 days.</h2>
+        <div class="price-row">
+          <span class="price-now">₹199</span>
+          <span class="price-was">₹399</span>
+        </div>
+        <ul class="includes">
+          <li>Full ebook — 155-page PDF</li>
+          <li>All 9 hustle playbooks + acquisition & execution systems</li>
+          <li>Reality-check table, pricing ladders and 90-day scorecard</li>
+          <li>Lifetime access to future updates</li>
+        </ul>
+      </div>
+      <div>
+        <a href="#" class="btn-primary">Buy now — instant download</a>
+        <p class="fine-note" style="color:rgba(243,242,236,0.55);">Secure checkout. Delivered straight to your inbox.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-label">Questions</div>
+    <h2 class="section-title">Before you buy</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">Does this guarantee I'll make money?<span class="plus">+</span></button>
+        <div class="faq-a"><p>No — and the book says so directly. It's educational content with illustrative examples, not an income promise. What it gives you is a structured way to test which path can work for you.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do I need to try all 9 hustle options?<span class="plus">+</span></button>
+        <div class="faq-a"><p>No. The book is built around picking one option that fits your time, skill and access, then testing it for 30 days before considering another.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">I have very little free time. Is this still for me?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Yes — an entire chapter covers treating time as your first capital, and each hustle's workflow is built around a realistic weekly hour count rather than a full-time schedule.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What format is the ebook?<span class="plus">+</span></button>
+        <div class="faq-a"><p>A 155-page PDF you can read on your phone, tablet or computer, with tables and checklists designed to be used, not just read once.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>&copy; 2026 MoreFromWork. All rights reserved.</p>
+    <p>Educational content only. Examples and calculations are illustrative. Income is not guaranteed.</p>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.closest('.faq-item');
+      var wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(i){ i.classList.remove('open'); });
+      if(!wasOpen){ item.classList.add('open'); }
+    });
+  });
+</script>
+
+</body>
+</html>
